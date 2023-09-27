@@ -8,7 +8,8 @@ import openai
 st.title('Interview Preparation HelpGPT')
 
 #OpenAI Setup
-openai.api_key = st.secrets['OPENAI_API_KEY']
+openai.api_key = st.text_input("API KEY:")
+st.write("If you entered correct API KEY, the bot will work properly. Recheck key in other cases.")
 if 'openai_model' not in st.session_state:
     st.session_state['openai_model'] = 'gpt-3.5-turbo'
 
