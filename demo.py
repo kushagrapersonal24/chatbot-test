@@ -123,7 +123,7 @@ if prompt:
     #Prompt Transformation
     final_prompt = defineprompt(prompt)
     #add final_prompt to the session state
-    st.session_state.messages.append({'role': 'user','content':prompt})
+    st.session_state.messages.append({'role': 'user','content':final_prompt})
     with st.chat_message('assistant'):
         message_placeholder = st.empty()
         full_response = ''
